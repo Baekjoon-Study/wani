@@ -11,3 +11,4 @@ for _ in range(n):
         else:
             l.append(s[i])
 print(count)
+
