@@ -1,27 +1,21 @@
-#include<stdio.h>
-#include<string.h>
- 
+#include <stdio.h>
+#include <string.h>
+
 int main() {
-	int T, t, i, len;
-	scanf("%d", &T);
-	char st[51];
-	int left = 0, right = 0;	// left: '('의 개수, right: ')'의 개수
- 
-	for (t = 0; t < T; t++) {
-		scanf("%s", st);
-		len = strlen(st);
-		for (i = 0; i < len; i++) {
-			if (st[i] == '(') left++;
-			else if (st[i] == ')') right++;
- 
-			if (right > left)
-				break;
+	int n;
+	char vps[51];
+	scanf("%d", &n);
+	//getchar();
+	for (int i = 0; i < n; i++) {
+		int open = 0, close = 0;
+		scanf("%s", vps);
+		for (int j = 0; j < strlen(vps); j++) {
+			if (vps[j] == '(') open++;
+			else if (vps[j] == ')') close++;
+			if (open < close) break;
 		}
-		if (left != right)
-			printf("NO\n");
-		else
-			printf("YES\n");
-		left = 0;	// '('의 개수 초기화
-		right = 0;	// ')'의 개수 초기화
+		if (close == open) printf("YES\n");
+		else printf("NO\n");
 	}
+	return 0;
 }
