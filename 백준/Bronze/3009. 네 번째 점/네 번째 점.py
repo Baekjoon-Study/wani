@@ -1,12 +1,12 @@
-x_nums = []
-y_nums = []
+x=[] ; y=[]
 for _ in range(3):
-    x, y = map(int, input().split())
-    x_nums.append(x)
-    y_nums.append(y)
-for i in range(3):
-    if x_nums.count(x_nums[i]) == 1:
-        x4 = x_nums[i]
-    if y_nums.count(y_nums[i]) == 1:
-        y4 = y_nums[i]
-print(x4, y4)
+    a,b=map(int,input().split())
+    if a in x:
+        x.remove(a)
+    else:
+        x.append(a)
+    if b in y:
+        y.remove(b)
+    else:
+        y.append(b)
+print(f'{x[0]} {y[0]}')
