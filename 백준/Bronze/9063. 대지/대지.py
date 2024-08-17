@@ -1,7 +1,6 @@
+X=[] ; Y=[]
 n = int(input())
-x, y = [], []
-for i in range(n):
-    xp, yp = map(int, input().split())
-    x.append(xp)
-    y.append(yp)
-print((max(x) - min(x)) * (max(y) - min(y)))
+for _ in range(n):
+    x,y=map(int,input().split())
+    X.append(x) ; Y.append(y)
+print((max(X)-min(X))*(max(Y)-min(Y)))
