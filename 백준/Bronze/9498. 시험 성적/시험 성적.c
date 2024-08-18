@@ -1,20 +1,11 @@
 #include <stdio.h>
 int main() {
-	int a;
-	scanf("%d", &a);
-	if (90 <= a && a <= 100) {
-		printf("A");
-	}
-	else if (80 <= a && a <= 89) {
-		printf("B");
-	}
-	else if (70 <= a && a <= 79) {
-		printf("C");
-	}
-	else if (60 <= a && a <= 69) {
-		printf("D");
-	}
-	else {
-		printf("F");
-	}
+	int x;
+	scanf("%d", &x);
+	if (90 <= x)printf("A\n");
+	else if (80 <= x && x < 90)printf("B\n");
+	else if (70 <= x && x < 80)printf("C\n");
+	else if (60 <= x && x < 70)printf("D\n");
+	else printf("F\n");
+	return 0;
 }
