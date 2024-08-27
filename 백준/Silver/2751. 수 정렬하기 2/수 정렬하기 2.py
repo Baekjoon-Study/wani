@@ -1,7 +1,8 @@
 import sys
-n = int(input())
+n = int(sys.stdin.readline())
 l = []
 for _ in range(n):
     l.append(int(sys.stdin.readline()))
 l = sorted(l)
-print(*l,sep='\n')
+for i in l:
+    print(i)
