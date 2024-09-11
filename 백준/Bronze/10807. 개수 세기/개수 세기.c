@@ -1,12 +1,19 @@
 #include <stdio.h>
+
+//1
 int main() {
-    int n, a[100], v, cnt = 0;
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++) {
-        scanf("%d", &a[i]);}
-    scanf("%d", &v);
-    for (int j = 0; j < n; j++) {
-        if (a[j] == v)
-            cnt++; }
-    printf("%d", cnt);
+	int l, n, i, count=0;
+	scanf("%d", &l);
+	int num[l];
+	for (i = 0; i < l; i++) {
+		scanf("%d", &n);
+		num[i] = n;
+	}
+	int key;
+	scanf("%d", &key);
+	for (i = 0; i < l; i++) {
+		if (num[i] == key)
+			count++;
+	}
+	printf("%d", count);
 }
