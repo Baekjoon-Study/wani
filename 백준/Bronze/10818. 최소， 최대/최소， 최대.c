@@ -1,16 +1,17 @@
 #include <stdio.h>
-int main() {
-    int N;
-    scanf("%d", &N);
-    int arr[N];
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &arr[i]);}
-    int min = arr[0], max = arr[0];
-    for (int j = 0; j < N; j++) {
-        if (arr[j] < min)
-            min = arr[j];
-        if (arr[j] > max)
-            max = arr[j];}
-
-    printf("%d %d", min, max);
+int main(){
+    int n,i,k;
+    scanf("%d",&n);
+    int list[n];
+    for(i=0;i<n;i++){
+        scanf("%d",&k);
+        list[i]=k;
+    }
+    int min=list[0], max=list[0];
+    for (i=1; i<n; i++){
+        if(min > list[i]) min = list[i];
+        if(max < list[i]) max = list[i];
+    }
+    printf("%d %d",min,max);
+    return 0;
 }
