@@ -1,5 +1,3 @@
-l = list( 0 for _ in range(100))
 n = int(input())
 user = list(map(int,input().split()))
-s_user = set(user)
-print(len(user)-len(s_user))
+print(len(user)-len(set(user)))
